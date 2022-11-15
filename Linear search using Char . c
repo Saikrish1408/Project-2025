@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+    printf("Linear Search..\n");
+    int i,no_of_elements,flag=0;
+    char search_element;
+    printf("Enter the Number of the Elements: ");
+    scanf("%d",&no_of_elements);
+    char array[no_of_elements];
+    printf("Enter the Elements in an Array: \n");
+    for(i=0;i<no_of_elements;i++)
+    {
+        printf("Element %d: ",i+1);
+        scanf("\n%c",&array[i]);
+    }
+    printf("Enter the Search Element: ");
+    scanf("\n%c",&search_element);
+    for(i=0;i<no_of_elements;i++)
+    {
+        if(array[i] == search_element)
+        {
+            printf("The Search Element is found at Position %d",i+1);
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 0)
+    {
+        printf("The Element is not Found");
+    }
+
+    return 0;
+}
+
+
+
+
+
